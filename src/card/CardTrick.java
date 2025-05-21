@@ -45,55 +45,10 @@ public class CardTrick {
         luckyCard.setValue(2);
         luckyCard.setSuit("Hearts");
         
-        Scanner scan = new Scanner(System.in);
-        Card userCard = new Card();
-        // choose card value
-        while (true){
-            System.out.print("Enter a card value (1-13): ");
-            try{
-                int userInput = Integer.parseInt(scan.nextLine());
-                if(userInput >= 1 && userInput <= 13) {
-                    userCard.setValue(userInput);
-                    break;
-                }
-                 else System.out.println("The range is from Ace to King only!");
-            } 
-            catch(NumberFormatException e){
-                System.out.println("Don't try anything else!");
-            }
-        }
-        // choose card suit
-        while (true){
-            System.out.print("Enter a suit (0-3 where 0=Heart, 1=Diamonds, 2=Clubs, 3=Spades): ");
-            try{
-                int userInput = Integer.parseInt(scan.nextLine());
-                switch (userInput){
-                    case 0:
-                        userCard.setSuit("Heart");
-                        break;
-                    case 1:
-                        userCard.setSuit("Diamonds");
-                        break;
-                    case 2:
-                        userCard.setSuit("Clubs");
-                        break;
-                    case 3:
-                        userCard.setSuit("Spades");
-                        break;
-                    default: 
-                        System.out.println("The range is from Heart to Spades only!");
-                }
-                break;
-            } 
-            catch(NumberFormatException e){
-                System.out.println("Don't try anything else!");
-            } 
-        }
-        
         // search magicHand
         boolean cardFound = false;
         for (Card c : magicHand){
-            if(c.getValue() == userCard.getValue() && c.getSuit().equalsIgnoreCase(userCard.getSuit()) ){
+            if(c.getValue() == luckyCard.getValue() && c.getSuit().equalsIgnoreCase(luckyCard.getSuit()) ){
                 cardFound = true;
                 break;
             }
