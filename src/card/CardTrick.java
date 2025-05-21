@@ -98,7 +98,11 @@ public class CardTrick {
         if(cardFound)System.out.println("Your card IS in the Magic Hand!!!");
         else System.out.println("Sorry, your card is not in the Magic Hand");
         System.out.println();
-                
+
+        // add luckyCard (hard-coded) from Github edit
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        lucyCard.setSuit("Hearts");
     }
     
 }
