@@ -39,6 +39,12 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         // add one luckcard hard code 2,clubs
+        
+        // add luckyCard (hard-coded) from Github edit
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Hearts");
+        
         Scanner scan = new Scanner(System.in);
         Card userCard = new Card();
         // choose card value
@@ -99,10 +105,7 @@ public class CardTrick {
         else System.out.println("Sorry, your card is not in the Magic Hand");
         System.out.println();
 
-        // add luckyCard (hard-coded) from Github edit
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        lucyCard.setSuit("Hearts");
+
     }
     
 }
